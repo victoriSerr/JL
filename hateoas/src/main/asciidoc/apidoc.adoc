@@ -1,0 +1,25 @@
+= Описание API по курсам
+
+== Методы
+
+|===
+|Метод | Назначение
+|`PUT`
+|Обновить сущность или ее состояние
+|===
+
+=== Закончить урок
+
+Можно закончить уроки со статусом *isFinished=false*
+
+.request
+
+include::{snippets}\finish_lesson\http-request.adoc[]
+
+.response
+
+include::{snippets}\finish_lesson\http-response.adoc[]
+
+.response-fields
+
+include::{snippets}\finish_lesson\response-fields.adoc[]

@@ -1,0 +1,58 @@
+db.courses.insert(
+    {
+        name: "dfsdf",
+        description: "sadf"
+    }
+    )
+db.lessons.insert(
+    {
+        name : "asd",
+        description : "asd",
+        isFinished : false
+    }
+    )
+db.students.insert(
+    {
+        firstName: "asd",
+        lastName: "asd"
+    }
+    )
+
+db.skills.insert(
+    {
+        name: "skill", description: "asd"
+    }
+    )
+
+db.teachers.insert(
+    {
+        name: "sdf",
+        surname: "asd",
+        institute: "itis"
+    }
+    )
+
+db.reviews.insert(
+    {
+        student : ObjectId("5faea14ebc66b278ac59c2f5"),
+        teacher: ObjectId("5fc6554212a3324213fe2da2"),
+        text: "sdf"
+    }
+    )
+
+db.courses.update({_id: ObjectId("5fc6549e12a3324213fe2d9e")},
+    {
+        $set : {
+            students : [{
+                student : ObjectId("5faea14ebc66b278ac59c2f5")
+            },
+                {
+                    student: ObjectId("5faea177bc66b278ac59c2f8")
+                }]
+        }
+    })
+db.lessons.update({_id: ObjectId("5fc6572112a3324213fe2dad")}, {
+    $set : {
+            course : ObjectId("5faea308bc66b278ac59c2ff")
+    }
+})
